@@ -1,14 +1,16 @@
 #!/bin/bash 
 #-----Installations-----: 
 sudo apt update 
-sudo apt install tmux -y 
 sudo apt-get install build-essential
 
 #-----Commands-----: 
-sudo echo "set bell-style none" >> "/etc/inputrc" 
-remove bell sound (wsl)
+sudo echo "set bell-style none" >> "/etc/inputrc" #remove bell sound (wsl)
 git config --global user.name <nombre de usuario
 git config --global user.email <example@mail.com>
+
+#-----Tmux-----: 
+sudo apt install tmux -y 
+echo "setw -g mouse on" >> .tmux.conf
 
 #-----Neovim-----: 
 wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim-linux64.tar.gz 
